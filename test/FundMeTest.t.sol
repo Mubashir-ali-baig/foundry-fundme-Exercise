@@ -19,7 +19,6 @@ contract FundMeTest is Test {
     }
 
     function testOwnerIsMsgSender() public view {
-        console.log("Owner", fundMe.getOwner());
         assertEq(fundMe.getOwner(), msg.sender);
     }
 
