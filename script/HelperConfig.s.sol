@@ -27,7 +27,7 @@ contract HelperConfig is Script {
         } else if (block.chainid == 1) {
             activeNetworkConfig = getMainnetETHConfig();
         } else if (block.chainid == 31337) {
-            activeNetworkConfig = getOrCreateAnvilConfig();
+            activeNetworkConfig = getOrCreateAnvilETHConfig();
         }
     }
 
@@ -51,7 +51,7 @@ contract HelperConfig is Script {
         });
     }
 
-    function getOrCreateAnvilConfig()
+    function getOrCreateAnvilETHConfig()
         public
         returns (NetworkConfig memory anvilConfig)
     {
